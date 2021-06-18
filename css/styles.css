@@ -1,7 +1,8 @@
 /* font importing */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 /* reseting css rules */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,8 +17,7 @@
     --gray: #ededed;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -49,7 +49,7 @@ nav {
 .brand {
     font-size: 2em;
     color: var(--blue);
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 nav ul {
@@ -83,7 +83,7 @@ nav ul button {
     border-radius: 4px;
 }
 
-nav ul button:hover{
+nav ul button:hover {
     transition: background, color 0.6s;
     background-color: var(--blue);
     color: #FFF;
@@ -151,7 +151,7 @@ section .filter-card {
     justify-content: center;
 }
 
-.search-input{
+.search-input {
     width: 700px;
     height: 50px;
     border: none;
@@ -171,12 +171,12 @@ section .filter-card {
     transition: 0.2s ease;
 }
 
-.search-button:hover{
+.search-button:hover {
     background: var(--gray);
     color: var(--blue);
 }
 
-.title-wrapper-catalog{
+.title-wrapper-catalog {
     margin-top: 200px;
     padding-bottom: 20px;
 }
@@ -208,7 +208,7 @@ section .card-item {
     justify-content: space-around;
 }
 
-.card-item img{
+.card-item img {
     width: 85%;
 }
 
@@ -296,4 +296,177 @@ section .card-item {
     font-size: 1em;
     letter-spacing: right;
     color: rgba(0, 0, 0, 0.4);
+}
+
+/* feature */
+
+.features {
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.title-wrapper-features {
+    padding: 20px 0px;
+}
+
+.features-card-block {
+    max-width: 1000px;
+    min-height: 300px;
+    height: 600px;
+    background: #FFF;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-gap: 30px;
+}
+
+.features-card-item {
+    max-width: 420px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #0000003b;
+    border-radius: 4px;
+}
+
+.features-text-content {
+    max-width: 60%;
+    margin: 5px;
+}
+
+.features-card-item img {
+    width: 64px;
+    height: 64px;
+}
+
+/* footer */
+
+.footer {
+    width: 100%;
+    height: 250px;
+}
+
+footer .main {
+    width: 100%;
+    height: 200px;
+    background: var(--orange);
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-company, .footer-rental, .footer-contact, .footer-social {
+    color: #FFF;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links h6 {
+    margin-bottom: 8px;
+}
+
+.main .footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .last {
+    width: 100%;
+    height: 50px;
+    background-color: var(--blue);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* responsive itens */
+
+@media (max-width: 576px) {
+    nav ul li {
+        display: none;
+    }
+    .header-block img {
+        width: 70%;
+        position: absolute;
+        right: 16%;
+        top: 30%;
+    }
+    .header-block .text {
+        position: absolute;
+        bottom: 10%;
+        left: 15;
+    }
+    section .filter-card {
+        width: 390px;
+        padding: 0px 10px;
+    }
+    .search-input {
+        max-width: 700px;
+        min-width: 240px;
+    }
+    .search-button {
+        max-width: 150px;
+        min-width: 80px;
+    }
+    .about {
+        margin-top: 100px;
+    }
+    .title-wrapper-about {
+        margin-bottom: 20px;
+    }
+    .about-content {
+        flex-direction: column;
+        height: 100%;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 90%;
+    }
+    .right p {
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+    }
+    .features {
+        height: 100%;
+    }
+    .features-card-block {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        height: 100%;
+    }
+    footer .main {
+        height: 100%;
+    }
+    .footer-links {
+        flex-direction: column;
+        padding-left: 10%;
+    }
 }
